@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7a93b83df3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <div class="container-sm">
+      <audio
+        id="beep"
+        class="clip"
+        controls
+        style="display: none;"
+        src="http://soundbible.com/grab.php?id=1815&type=mp3"
+      ></audio>
+      <div class="row justify-content-center text-center">
+        <div class="col-md-6">
+          <div class="card bg-light">
+            <div class="card-header"><h3>Pomodoro</h3></div>
+            <div class="card-body">
+              <div id="timer-label" class="card-title h3">Session</div>
+              <div class="container-sm">
+                <div class="row no-gutter">
+                  <div class="col-md-12">
+                    <input
+                      id="time-left"
+                      type="text"
+                      class="form-control"
+                      disabled
+                      style="
+                        height: 200px;
+                        width: 100%;
+                        font-size: 120px;
+                        text-align: right;
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="row no-gutter">
+                  <div class="col-md-6 mt-3">
+                    <button id="reset" class="btn btn-lg btn-warning btn-block">
+                      RESET
+                    </button>
+                  </div>
+                  <div class="col-md-6 mt-3">
+                    <button
+                      id="start_stop"
+                      class="btn btn-lg btn-success btn-block"
+                    >
+                      START/STOP
+                    </button>
+                  </div>
+                </div>
+                <div class="row no-gutter">
+                  <div class="col-md-6 mt-2">
+                    <h3 id="break-label">Break Length</h3>
+                    <a
+                      id="break-decrement"
+                      href=""
+                      class="btn btn-outline-danger m-2"
+                      ><i class="fas fa-minus"></i
+                    ></a>
+                    <input
+                      id="break-length"
+                      type="text"
+                      class="form-control form-control-lg"
+                      disabled
+                      value="5"
+                      style="text-align: center;"
+                    />
+                    <a
+                      id="break-increment"
+                      href=""
+                      class="btn btn-outline-success m-2"
+                      ><i class="fas fa-plus"></i
+                    ></a>
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <h3 id="session-label">Session Length</h3>
+                    <a
+                      id="session-decrement"
+                      href=""
+                      class="btn btn-outline-danger m-2"
+                      ><i class="fas fa-minus"></i
+                    ></a>
+                    <input
+                      id="session-length"
+                      type="text"
+                      class="form-control form-control-lg"
+                      disabled
+                      value="25"
+                      style="text-align: center;"
+                    />
+                    <a
+                      id="session-increment"
+                      href=""
+                      class="btn btn-outline-success m-2"
+                      ><i class="fas fa-plus"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="http://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <script src="pomodoro.js"></script>
+  </body>
+</html>
